@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
     );
 
     return MaterialApp(
-      title: 'Joyal - Portfolio',
+      title: 'Portfolio',
       theme: theme,
       debugShowCheckedModeBanner: false,
       home: const LandingPage(),
