@@ -7,6 +7,7 @@ import '../../../theme/app_margin.dart';
 import '../../../utils/platform_utils.dart';
 import 'widgets/about_section_widget.dart';
 import 'widgets/career_section_widget.dart';
+import 'widgets/contact_section_widget.dart';
 import 'widgets/portfolio_section_widget.dart';
 import 'widgets/prifile_image_widget.dart';
 import 'widgets/service_section_widget.dart';
@@ -66,6 +67,7 @@ class _LandingPageState extends State<LandingPage> {
   List<Widget> _buildSections({required bool isWeb}) {
     return [
       if (!isWeb) _buildAnimatedSection(const ProfileImageWidget(), 'profile_image'),
+      SizedBox(height: isWeb ? AppMargin.dm_60 : AppMargin.dm_00),
       _buildAnimatedSection(const ProfileDetailsWidget(), 'profile_details'),
       SizedBox(height: isWeb ? AppMargin.dm_120 : AppMargin.dm_130),
       _buildAnimatedSection(const AboutSectionWidget(), 'about_section'),
@@ -77,6 +79,8 @@ class _LandingPageState extends State<LandingPage> {
       _buildAnimatedSection(const SkillsSectionWidget(), 'skills_section'),
       SizedBox(height: isWeb ? AppMargin.dm_120 : AppMargin.dm_80),
       _buildAnimatedSection(const PortfolioSectionWidget(), 'portfolio_section'),
+      SizedBox(height: isWeb ? AppMargin.dm_120 : AppMargin.dm_80),
+      _buildAnimatedSection(const ContactSectionWidget(), 'contact_section'),
       const SizedBox(height: AppMargin.dm_100),
     ];
   }
